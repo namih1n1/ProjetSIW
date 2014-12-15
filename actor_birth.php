@@ -1,6 +1,12 @@
 <?php
 require_once( "sparqllib.php" );
 echo "tata ELSA !!!!!";
+echo "bourrinage echo !!!!!";
+
+echo "bourrinage echo !!!!!";
+
+echo "bourrinage echo !!!!!";
+echo "bourrinage echo !!!!!";
 
 $db = sparql_connect( "http://dbpedia.org/sparql" );
 if( !$db ) { print sparql_errno() . ": " . sparql_error(). "\n"; exit; }
