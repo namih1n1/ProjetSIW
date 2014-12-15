@@ -1,8 +1,6 @@
 <?php
 require_once( "sparqllib.php" );
-echo "tata ELSA !!!!!";
-echo "autre test by HLE";
-echo "toto";
+echo "PROUT !! Commit dans ma branche, putain de merde de GIT !"
 
 $db = sparql_connect( "http://dbpedia.org/sparql" );
 if( !$db ) { print sparql_errno() . ": " . sparql_error(). "\n"; exit; }
