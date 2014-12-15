@@ -1,6 +1,6 @@
 <?php
 require_once( "sparqllib.php" );
-echo " ELSA branche hle";
+echo "hle PROUT";
 
 $db = sparql_connect( "http://dbpedia.org/sparql" );
 if( !$db ) { print sparql_errno() . ": " . sparql_error(). "\n"; exit; }
