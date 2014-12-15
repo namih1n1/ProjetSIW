@@ -1,5 +1,6 @@
 <?php
-require_once( "sparqllib.php" );
+require_once( "sparqllib.php" )
+echo "c'est l'histoire d'une grenouille qui pensait qu'il était tôt, mais en fait il était tard";
 echo "PROUT !! Commit dans ma branche, putain de merde de GIT !"
 
 $db = sparql_connect( "http://dbpedia.org/sparql" );
