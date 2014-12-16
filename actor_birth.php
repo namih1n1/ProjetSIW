@@ -1,4 +1,6 @@
 <?php
+include("./includes/header.php");
+
 $sparql = "
 	select distinct ?nom where {
 		?Ressource dbpprop:occupation ?occupation .
