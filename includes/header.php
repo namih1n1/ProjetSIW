@@ -8,6 +8,7 @@ if( !$db ) { print sparql_errno() . ": " . sparql_error(). "\n"; exit; }
 // Initialisation du namespace pour l'ontology
 sparql_ns("dbpedia-owl","http://dbpedia.org/ontology/");
 
-// Déclaration de la variable "today" pour le requêtage
+// Déclaration des variables 
 $__today = date("m-d");
+$__url_wiki = "http://wikipedia.org/wiki/";
 ?>
