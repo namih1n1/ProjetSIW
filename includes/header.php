@@ -9,5 +9,5 @@ if( !$db ) { print sparql_errno() . ": " . sparql_error(). "\n"; exit; }
 sparql_ns("dbpedia-owl","http://dbpedia.org/ontology/");
 
 // Déclaration de la variable "today" pour le requêtage
-$today = date("m-d");
+$__today = date("m-d");
 ?>
