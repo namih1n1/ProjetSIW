@@ -1,12 +1,5 @@
 <?php
-require_once( "sparqllib.php" );
-
-$db = sparql_connect( "http://dbpedia.org/sparql" );
-if( !$db ) { print sparql_errno() . ": " . sparql_error(). "\n"; exit; }
-
-sparql_ns("dbpedia-owl","http://dbpedia.org/ontology/");
-
-$today = date("m-d");
+include("./includes/header.php");
 
 $sparql = "
 	select distinct ?nom where {
@@ -14,7 +7,7 @@ $sparql = "
 		?Ressource dbpedia-owl:deathDate ?mort .
 		?Ressource rdfs:label ?nom .
 		FILTER(?occupation like \"*Actor*\") .
-		FILTER(?mort like \"*-".$today."\") .
+		FILTER(?mort like \"*-".$__today."\") .
 		FILTER langmatches(lang(?nom),\"en\")
 	}";
 	
@@ -27,7 +20,7 @@ print sparql_num_rows( $result )." acteurs sont morts ce jour.</p>";
 print "<table class='example_table'>";
 print "<tr>";
 
-// Entête
+// EntÃªte
 // foreach( $fields as $field ) {	print "<th>$field</th>"; }
 
 print "</tr>";
@@ -36,7 +29,7 @@ while( $row = sparql_fetch_array( $result ) )
 	print "<tr>";
 		foreach( $fields as $field )
 		{		
-			echo "<td><a href=\"http://wikipedia.org/wiki/".utf8_decode("$row[$field]")."\"> ".utf8_decode("$row[$field]"). "</td>";	
+			echo "<td><a href=\"" . $__url_wiki . utf8_decode("$row[$field]") ."\"> ".utf8_decode("$row[$field]"). "</td>";	
 		}
 	print "</tr>";
 }
