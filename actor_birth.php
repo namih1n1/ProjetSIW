@@ -1,22 +1,7 @@
 <?php
-<<<<<<< HEAD
-<<<<<<< HEAD
-require_once( "sparqllib.php" );
-echo "hle PROUT";
 
-$db = sparql_connect( "http://dbpedia.org/sparql" );
-if( !$db ) { print sparql_errno() . ": " . sparql_error(). "\n"; exit; }
-
-sparql_ns("dbpedia-owl","http://dbpedia.org/ontology/");
-
-$today = date("m-d");
-
-=======
->>>>>>> origin/branche_hle
-=======
 include("./includes/header.php");
 
->>>>>>> 804198543877067bddf5db01a0ffc5eb30b30c0e
 $sparql = "
 	select distinct ?nom where {
 		?Ressource dbpprop:occupation ?occupation .
@@ -36,7 +21,7 @@ echo sparql_num_rows( $result )." acteurs sont n&eacute;s ce jour.</p>";
 echo "<table class='example_table'>";
 echo "<tr>";
 
-// Entête
+// EntÃªte
 // foreach( $fields as $field ) {	echo "<th>$field</th>"; }
 
 echo "</tr>";
